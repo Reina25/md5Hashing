@@ -1,0 +1,89 @@
+<div class="card card-primary card-outline">
+
+    <div class="main-area">
+        <div class="content-area">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="pt-5 px-4">
+
+                        
+                        <form #hashform="ngForm" (ngSubmit)="onSubmit(hashform.value)">
+
+                            <div class="form-group">
+                                <label for="">StudentID</label>
+                                <input type="text" name="studentid"  #studentid="ngModel" class="form-control "
+                                [(ngModel)]="hashmodel.studentid"
+                                 ngModel>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">EventID</label>
+                                <input type="text" name="eventid"  #eventid="ngModel" class="form-control " 
+                                [(ngModel)]="hashmodel.eventid"
+  
+                                ngModel>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Hash</label>
+                                <input type="text" name="hash"  #hash="ngModel" class="form-control " 
+                                [(ngModel)]="hashmodel.hash"
+  
+                                ngModel>
+                                
+                            </div>
+
+                            <!-- <div class="form-group">
+                                <label for="">New hash</label>
+                                <input type="text" name="hash2"  #hash2="ngModel" class="form-control " 
+                                [(ngModel)]="hashmodel.hash2"
+                                  ngModel>
+                                
+                            </div> -->
+
+                            
+
+                            
+
+                            <div *ngIf="submitted">
+                                <label for="">New Hash</label>
+                                <p>{{hash2}}</p>
+                                <p *ngIf="hashingsuccess " class="text-success ">Success!</p>
+                                <p *ngIf="!hashingsuccess" class="text-danger ">Error!</p>
+                            </div>
+
+
+                            <div class="pb-5">
+                                <button class="btn btn-success float-end  " (click)="onSubmit" type="submit">Submit</button>
+
+                            </div>            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
